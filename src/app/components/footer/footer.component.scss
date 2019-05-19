@@ -1,0 +1,15 @@
+@import "/../../../styles.scss";
+
+.footer {
+  bottom: 0;
+  padding: 15px 0 15px 0;
+  width: 100%;
+  min-height: 60px;
+  background-color: #f5f5f5;
+
+  .container {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

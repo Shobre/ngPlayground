@@ -1,0 +1,61 @@
+<mat-card>
+  <mat-card-header class="margin-bottom">
+    <mat-card-title>
+      <h3>Charts</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/charts/bar"
+          >Bar</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/charts/horizontal-bar"
+          >Horizontal bar</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/charts/line"
+          >Line</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/charts/doughnut"
+          >Doughnut</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/charts/pie"
+          >Pie</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/charts/radar"
+          >Radar</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/charts/polar-area"
+          >Polar Area</a
+        >
+      </li>
+    </ul>
+
+    <mat-card>
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

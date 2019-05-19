@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~normalize.css/normalize.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~angular-calendar/css/angular-calendar.css";
+
+.padding-top {
+  padding-top: 15px;
+}
+.padding-bottom {
+  padding-bottom: 15px;
+}
+.padding-left {
+  padding-left: 15px;
+}
+.padding-right {
+  padding-right: 15px;
+}
+.margin-top {
+  margin-top: 15px;
+}
+.margin-bottom {
+  margin-bottom: 15px;
+}
+.margin-left {
+  margin-left: 15px;
+}
+.margin-right {
+  margin-right: 15px;
+}
