@@ -1,0 +1,34 @@
+<h1>Rankings</h1>
+<mat-form-field>
+  <input
+    matInput
+    placeholder="Rank"
+    class=""
+    type="number"
+    id="rank"
+    [(ngModel)]="rank"
+  />
+</mat-form-field>
+<button mat-raised-button class="" (click)="update()">
+  Update
+</button>
+<table matSort (matSortChange)="sortData($event)" class="" *ngIf="rankings">
+  <tr>
+    <th mat-sort-header="rank">Rank</th>
+    <th mat-sort-header="date">Date</th>
+    <th mat-sort-header="points">Points</th>
+    <th mat-sort-header="fName" class="">First Name</th>
+    <th mat-sort-header="lName" class="">Last Name</th>
+  </tr>
+  <tr *ngFor="let ranking of sortedData">
+    <td>{{ ranking.rank }}</td>
+    <td>{{ ranking.date }}</td>
+    <td>{{ ranking.points }}</td>
+    <td class="">
+      {{ ranking.player.first_name }}
+    </td>
+    <td class="">
+      {{ ranking.player.last_name }}
+    </td>
+  </tr>
+</table>

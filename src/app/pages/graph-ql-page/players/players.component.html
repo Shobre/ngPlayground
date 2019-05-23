@@ -1,0 +1,26 @@
+<table matSort (matSortChange)="sortData($event)" class="">
+  <tr>
+    <th mat-sort-header="fName" class="">First Name</th>
+    <th mat-sort-header="lName" class="">Last Name</th>
+    <th mat-sort-header="hand" class="">Hand</th>
+    <th mat-sort-header="birthday" class="">Birthday</th>
+    <th mat-sort-header="country" class="">Country</th>
+  </tr>
+  <tr *ngFor="let player of sortedData">
+    <td class="">{{ player.first_name }}</td>
+    <td class="">{{ player.last_name }}</td>
+    <td class="">{{ player.hand }}</td>
+    <td class="">{{ player.birthday }}</td>
+    <td class="">{{ player.country }}</td>
+  </tr>
+</table>
+
+<div class="">
+  <button mat-raised-button class="" (click)="prevPage()">
+    <<<
+  </button>
+  Page {{ page }}
+  <button mat-raised-button class="" (click)="nextPage()">
+    >>>
+  </button>
+</div>

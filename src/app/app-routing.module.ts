@@ -2,14 +2,18 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { StartPageComponent } from "./pages/start-page/start-page.component";
 import { ChartsPageComponent } from "./pages/charts-page/charts-page.component";
-import { PieChartComponent } from "./components/charts/pie-chart/pie-chart.component";
-import { RadarChartComponent } from "./components/charts/radar-chart/radar-chart.component";
-import { BarChartComponent } from "./components/charts/bar-chart/bar-chart.component";
-import { LineChartComponent } from "./components/charts/line-chart/line-chart.component";
-import { DoughnutChartComponent } from "./components/charts/doughnut-chart/doughnut-chart.component";
+import { GraphQLPageComponent } from "./pages/graph-ql-page/graph-ql-page.component";
+import { PieChartComponent } from "./pages/charts-page/charts/pie-chart/pie-chart.component";
+import { RadarChartComponent } from "./pages/charts-page/charts/radar-chart/radar-chart.component";
+import { BarChartComponent } from "./pages/charts-page/charts/bar-chart/bar-chart.component";
+import { LineChartComponent } from "./pages/charts-page/charts/line-chart/line-chart.component";
+import { DoughnutChartComponent } from "./pages/charts-page/charts/doughnut-chart/doughnut-chart.component";
 import { CalendarPageComponent } from "./pages/calendar-page/calendar-page.component";
-import { PolarAreaChartComponent } from "./components/charts/polar-area-chart/polar-area-chart.component";
-import { HorizontalBarChartComponent } from "./components/charts/horizontal-bar-chart/horizontal-bar-chart.component";
+import { PolarAreaChartComponent } from "./pages/charts-page/charts/polar-area-chart/polar-area-chart.component";
+import { HorizontalBarChartComponent } from "./pages/charts-page/charts/horizontal-bar-chart/horizontal-bar-chart.component";
+import { HomeComponent } from "./pages/graph-ql-page/home/home.component";
+import { RankingComponent } from "./pages/graph-ql-page/ranking/ranking.component";
+import { PlayersComponent } from "./pages/graph-ql-page/players/players.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "start-page", pathMatch: "full" },
@@ -56,6 +60,25 @@ const routes: Routes = [
   {
     path: "calendar",
     component: CalendarPageComponent
+  },
+  {
+    path: "graphql",
+    component: GraphQLPageComponent,
+    children: [
+      { path: "", redirectTo: "home", pathMatch: "full" },
+      {
+        path: "home",
+        component: HomeComponent
+      },
+      {
+        path: "players",
+        component: PlayersComponent
+      },
+      {
+        path: "ranking",
+        component: RankingComponent
+      }
+    ]
   }
 ];
 
