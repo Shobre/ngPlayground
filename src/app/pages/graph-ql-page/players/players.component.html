@@ -16,11 +16,11 @@
 </table>
 
 <div class="">
-  <button mat-raised-button class="" (click)="prevPage()">
-    <<<
+  <button mat-stroked-button class="btn margin-right" (click)="prevPage()">
+    <p class="lead margin-none"><<<</p>
   </button>
-  Page {{ page }}
-  <button mat-raised-button class="" (click)="nextPage()">
-    >>>
+  <p class="lead margin-none" style="display: inline-block;">Page {{ page }}</p>
+  <button mat-stroked-button class="btn margin-left" (click)="nextPage()">
+    <p class="lead margin-none">>>></p>
   </button>
 </div>

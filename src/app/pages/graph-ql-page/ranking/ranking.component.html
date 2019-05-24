@@ -9,7 +9,7 @@
     [(ngModel)]="rank"
   />
 </mat-form-field>
-<button mat-raised-button class="" (click)="update()">
+<button mat-stroked-button class="btn margin-left" (click)="update()">
   Update
 </button>
 <table matSort (matSortChange)="sortData($event)" class="" *ngIf="rankings">
